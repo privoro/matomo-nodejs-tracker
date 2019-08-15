@@ -107,6 +107,9 @@ MatomoTracker.prototype.trackBulk = function trackBulk (events, callback) {
     hostname: uri.hostname,
     port: uri.port,
     path: uri.path,
+    query: {
+      idsite: this.siteId,
+    },
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
